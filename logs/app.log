@@ -1143,3 +1143,33 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2025-10-25T03:46:11.698-03:00  INFO 6612 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-10-25T03:46:11.702-03:00  INFO 6612 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-10-25T03:46:11.714-03:00  INFO 6612 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-25T03:57:59.414-03:00  INFO 23884 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 23884 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
+2025-10-25T03:57:59.417-03:00  INFO 23884 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
+2025-10-25T03:58:00.995-03:00  INFO 23884 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T03:58:01.120-03:00  INFO 23884 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 3 JPA repository interfaces.
+2025-10-25T03:58:02.519-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-25T03:58:02.552-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-25T03:58:02.553-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2025-10-25T03:58:02.734-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-25T03:58:02.735-03:00  INFO 23884 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3257 ms
+2025-10-25T03:58:03.036-03:00  INFO 23884 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-25T03:58:05.468-03:00  INFO 23884 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79ba0a6f
+2025-10-25T03:58:05.471-03:00  INFO 23884 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-25T03:58:05.539-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T03:58:05.670-03:00  INFO 23884 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-10-25T03:58:05.745-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T03:58:06.307-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T03:58:08.128-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T03:58:08.132-03:00  INFO 23884 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T03:58:08.940-03:00  WARN 23884 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T03:58:09.645-03:00  INFO 23884 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-25T03:58:09.659-03:00  INFO 23884 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 10.942 seconds (process running for 11.544)
+2025-10-25T03:58:12.257-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-25T03:58:12.258-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-25T03:58:12.260-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-25T03:58:12.526-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] c.p.s.implementations.TicketService      : Creando nuevo ticket para vehículo con patente: guf634
+2025-10-25T03:58:13.113-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] c.p.s.implementations.ConductorService   : Creando nuevo conductor con DNI: 44998329
+2025-10-25T03:58:13.950-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] c.p.s.implementations.ConductorService   : Conductor creado exitosamente con ID: 1
+2025-10-25T03:58:14.137-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] c.p.s.implementations.VehiculoService    : Creando nuevo vehiculo con patente: guf634
+2025-10-25T03:58:14.878-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] c.p.s.implementations.VehiculoService    : Vehiculo creado exitosamente con ID: 1
+2025-10-25T03:58:15.817-03:00  INFO 23884 --- [sistema-estacionamiento] [http-nio-8082-exec-1] c.p.s.implementations.TicketService      : Ticket creado exitosamente con ID: 1 para vehículo: GUF634
