@@ -21,7 +21,7 @@ public class TicketCleanUpScheduler {
     @Scheduled(cron = "0 0 3 * * ?")
     public void eliminarTicketsViejos() {
         LocalDateTime limite = LocalDateTime.now().minusDays(30);
-        ticketRepository.deleteByFechaBefore(limite);
+        ticketRepository.deleteByFechaHoraEntradaBefore(limite);
         System.out.println("🗑️ Tickets anteriores a " + limite + " eliminados");
     }
 }

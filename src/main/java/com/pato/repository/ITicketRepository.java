@@ -16,5 +16,5 @@ public interface ITicketRepository extends JpaRepository<Ticket, Long> {
     Optional<Ticket> findByVehiculoIdAndEstadoTicket(Long idVehiculo, EstadoTicket estadoTicket);
     boolean existsByVehiculoPatenteAndEstadoTicket(String patente, EstadoTicket estadoTicket);
     boolean existsByConductorDniAndEstadoTicket(String dni, EstadoTicket estadoTicket);
-    void deleteByFechaBefore(LocalDateTime fecha);
+    void deleteByFechaHoraEntradaBefore(LocalDateTime fecha);
 }
