@@ -25,4 +25,5 @@ public class VehiculoRequestDTO {
     private TipoVehiculo tipo;
 
     private String patente;
+
 }

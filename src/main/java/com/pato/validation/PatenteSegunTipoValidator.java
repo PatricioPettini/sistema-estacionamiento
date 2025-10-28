@@ -15,7 +15,10 @@ public class PatenteSegunTipoValidator implements ConstraintValidator<PatenteSeg
 
         // ✅ Caso 1: Bicicleta → la patente puede estar vacía o null
         if ("BICICLETA".equalsIgnoreCase(tipo)) {
-            return patente == null || patente.trim().isEmpty();
+            if (patente != null && !patente.trim().isEmpty()) {
+                vehiculo.setPatente(null);
+            }
+            return true;
         }
 
         // ✅ Caso 2: Otros tipos → la patente es obligatoria y debe cumplir formato
@@ -24,8 +27,8 @@ public class PatenteSegunTipoValidator implements ConstraintValidator<PatenteSeg
             return false;
         }
 
-        if (!patente.matches("^[A-Za-z0-9]{6,8}$")) {
-            agregarMensaje(context, "La patente debe tener entre 6 y 8 caracteres alfanuméricos sin espacios ni símbolos (ejemplo: AA222BB)");
+        if (!patente.matches("^[A-Za-z0-9]{6,7}$")) {
+            agregarMensaje(context, "La patente debe tener entre 6 y 7 caracteres alfanuméricos sin espacios ni símbolos (ejemplo: AA222BB)");
             return false;
         }
 

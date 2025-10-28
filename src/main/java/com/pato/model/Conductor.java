@@ -18,8 +18,8 @@ public class Conductor {
 
     private String apellido;
 
-    @Column(unique = true, nullable = false)
-    private String telefono;
+//    @Column(nullable = true)
+//    private String telefono;
 
     @Column(unique = true, nullable = false)
     private String dni;

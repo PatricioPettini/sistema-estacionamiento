@@ -5,6 +5,7 @@ import com.pato.model.enums.EstadoTicket;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,5 +16,5 @@ public interface ITicketRepository extends JpaRepository<Ticket, Long> {
     Optional<Ticket> findByVehiculoIdAndEstadoTicket(Long idVehiculo, EstadoTicket estadoTicket);
     boolean existsByVehiculoPatenteAndEstadoTicket(String patente, EstadoTicket estadoTicket);
     boolean existsByConductorDniAndEstadoTicket(String dni, EstadoTicket estadoTicket);
-
+    void deleteByFechaBefore(LocalDateTime fecha);
 }

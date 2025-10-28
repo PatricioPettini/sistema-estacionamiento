@@ -16,7 +16,7 @@ public class ConductorResponseDTO {
 
     private String apellido;
 
-    private String telefono;
+//    private String telefono;
 
     private String dni;
 }

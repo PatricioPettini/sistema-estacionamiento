@@ -32,4 +32,16 @@ public class TicketValidator {
 
         log.debug("Validación OK: el ticket {} no estába aun finalizado.", idTicket);
     }
+
+    public void validarVehiculoEnCurso(String patente, EstadoTicket estadoTicket){
+        if(ticketRepository.existsByVehiculoPatenteAndEstadoTicket(patente, estadoTicket)){
+            throw new IllegalArgumentException("Ya existe un ticket en curso para este vehículo.");
+        }
+    }
+
+    public void validarConductorEnCurso(String dni, EstadoTicket estadoTicket){
+        if(ticketRepository.existsByConductorDniAndEstadoTicket(dni, estadoTicket)){
+            throw new IllegalArgumentException("Ya existe un ticket en curso para este conductor.");
+        }
+    }
 }

@@ -18,7 +18,10 @@ public class VehiculoMapper {
     }
 
     public Vehiculo toEntity(VehiculoRequestDTO dto){
-        return modelMapper.map(dto,Vehiculo.class);
+        Vehiculo vehiculo= new Vehiculo();
+        vehiculo.setTipo(dto.getTipo());
+        vehiculo.setPatente(dto.getPatente().toUpperCase());
+        return vehiculo;
     }
 
     public Vehiculo toEntity(VehiculoResponseDTO dto){

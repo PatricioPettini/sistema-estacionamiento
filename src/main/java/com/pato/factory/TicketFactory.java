@@ -11,6 +11,7 @@ import com.pato.model.Vehiculo;
 import com.pato.model.enums.EstadoTicket;
 import com.pato.service.interfaces.IConductorService;
 import com.pato.service.interfaces.IVehiculoService;
+import com.pato.validation.TicketValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -24,13 +25,18 @@ public class TicketFactory {
     private final IVehiculoService vehiculoService;
     private final ConductorMapper conductorMapper;
     private final VehiculoMapper vehiculoMapper;
+    private final TicketValidator ticketValidator;
 
     public Ticket crearTicket(TicketRequestDTO ticketRequestDTO){
         Conductor conductor=conductorService.getEntityByDni(ticketRequestDTO.getConductor().getDni())
                 .orElseGet(()->conductorService.crearConductor(ticketRequestDTO.getConductor()));
 
+        ticketValidator.validarConductorEnCurso(conductor.getDni(), EstadoTicket.EN_CURSO);
+
         Vehiculo vehiculo= vehiculoService.getEntityByPatente(ticketRequestDTO.getVehiculo().getPatente())
                 .orElseGet(()->vehiculoService.crearVehiculo(ticketRequestDTO.getVehiculo()));
+
+        ticketValidator.validarVehiculoEnCurso(vehiculo.getPatente(), EstadoTicket.EN_CURSO);
 
         return Ticket.builder()
                         .conductor(conductor)
@@ -41,9 +47,14 @@ public class TicketFactory {
     }
 
     public Ticket actualizarDesdeDTO(Ticket ticketExistente, TicketRequestDTO dto) {
+
+        ticketValidator.validarConductorEnCurso(dto.getConductor().getDni(), EstadoTicket.EN_CURSO);
+
         Conductor conductor = conductorService
                 .getEntityById(ticketExistente.getConductor().getId());
-        ConductorResponseDTO confuctorActualizado=conductorService.editarConductor(conductor.getId(), dto.getConductor());
+        ConductorResponseDTO conductorActualizado=conductorService.editarConductor(conductor.getId(), dto.getConductor());
+
+        ticketValidator.validarVehiculoEnCurso(dto.getVehiculo().getPatente(), EstadoTicket.EN_CURSO);
 
         Vehiculo vehiculo = vehiculoService
                 .getEntityById(ticketExistente.getVehiculo().getId());
@@ -54,7 +65,7 @@ public class TicketFactory {
                 .fechaHoraEntrada(ticketExistente.getFechaHoraEntrada())
                 .estadoTicket(ticketExistente.getEstadoTicket())
                 .vehiculo(vehiculoMapper.toEntity(vehiculoActualizado))
-                .conductor(conductorMapper.toEntity(confuctorActualizado))
+                .conductor(conductorMapper.toEntity(conductorActualizado))
                 .build();
     }
 
