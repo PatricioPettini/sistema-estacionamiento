@@ -28,12 +28,16 @@ public class TicketFactory {
     private final TicketValidator ticketValidator;
 
     public Ticket crearTicket(TicketRequestDTO ticketRequestDTO){
-        Conductor conductor=conductorService.getEntityByDni(ticketRequestDTO.getConductor().getDni())
+
+        String dni=ticketRequestDTO.getConductor().getDni();
+        String patente=ticketRequestDTO.getVehiculo().getPatente();
+
+        Conductor conductor=conductorService.getEntityByDni(dni)
                 .orElseGet(()->conductorService.crearConductor(ticketRequestDTO.getConductor()));
 
         ticketValidator.validarConductorEnCurso(conductor.getDni(), EstadoTicket.EN_CURSO);
 
-        Vehiculo vehiculo= vehiculoService.getEntityByPatente(ticketRequestDTO.getVehiculo().getPatente())
+        Vehiculo vehiculo= vehiculoService.getEntityByPatente(patente)
                 .orElseGet(()->vehiculoService.crearVehiculo(ticketRequestDTO.getVehiculo()));
 
         ticketValidator.validarVehiculoEnCurso(vehiculo.getPatente(), EstadoTicket.EN_CURSO);
@@ -47,8 +51,12 @@ public class TicketFactory {
     }
 
     public Ticket actualizarDesdeDTO(Ticket ticketExistente, TicketRequestDTO dto) {
+        String dniExistente=ticketExistente.getConductor().getDni();
+        String patenteExistente=ticketExistente.getVehiculo().getPatente();
+        String dniNuevo=dto.getConductor().getDni();
+        String patenteNueva=dto.getVehiculo().getPatente();
 
-        if(!ticketExistente.getConductor().getDni().equals(dto.getConductor().getDni())) {
+        if(!dniExistente.equals(dniNuevo)) {
             ticketValidator.validarConductorEnCurso(dto.getConductor().getDni(), EstadoTicket.EN_CURSO);
         }
 
@@ -56,7 +64,9 @@ public class TicketFactory {
                 .getEntityById(ticketExistente.getConductor().getId());
         ConductorResponseDTO conductorActualizado=conductorService.editarConductor(conductor.getId(), dto.getConductor());
 
-        ticketValidator.validarVehiculoEnCurso(dto.getVehiculo().getPatente(), EstadoTicket.EN_CURSO);
+        if(!patenteExistente.equals(patenteNueva)) {
+            ticketValidator.validarVehiculoEnCurso(dto.getVehiculo().getPatente(), EstadoTicket.EN_CURSO);
+        }
 
         Vehiculo vehiculo = vehiculoService
                 .getEntityById(ticketExistente.getVehiculo().getId());
