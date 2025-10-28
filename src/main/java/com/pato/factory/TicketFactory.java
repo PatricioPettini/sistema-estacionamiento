@@ -48,7 +48,9 @@ public class TicketFactory {
 
     public Ticket actualizarDesdeDTO(Ticket ticketExistente, TicketRequestDTO dto) {
 
-        ticketValidator.validarConductorEnCurso(dto.getConductor().getDni(), EstadoTicket.EN_CURSO);
+        if(!ticketExistente.getConductor().getDni().equals(dto.getConductor().getDni())) {
+            ticketValidator.validarConductorEnCurso(dto.getConductor().getDni(), EstadoTicket.EN_CURSO);
+        }
 
         Conductor conductor = conductorService
                 .getEntityById(ticketExistente.getConductor().getId());

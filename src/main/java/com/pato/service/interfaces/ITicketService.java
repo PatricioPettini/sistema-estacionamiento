@@ -11,6 +11,6 @@ public interface ITicketService {
     TicketResponseDTO editarTicket(Long idTicket, TicketRequestDTO ticketRequestDTO);
     List<TicketResponseDTO> getAllTickets();
     TicketResponseDTO crearTicket(TicketRequestDTO ticketRequestDTO);
-    TicketResponseDTO salidaVehiculo(Long idTicket);
+    TicketResponseDTO salidaVehiculo(Long idTicket, String observaciones);
     Ticket getEntityById(Long idTicket);
 }

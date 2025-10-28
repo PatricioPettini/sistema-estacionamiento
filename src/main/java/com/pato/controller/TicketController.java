@@ -38,7 +38,7 @@ public class TicketController {
     }
 
     @PatchMapping("/finalizar/{idTicket}")
-    public ResponseEntity<TicketResponseDTO> finalizarTicket(@PathVariable Long idTicket){
-        return ResponseEntity.ok(ticketService.salidaVehiculo(idTicket));
+    public ResponseEntity<TicketResponseDTO> finalizarTicket(@PathVariable Long idTicket, @RequestBody String observaciones){
+        return ResponseEntity.ok(ticketService.salidaVehiculo(idTicket, observaciones));
     }
 }

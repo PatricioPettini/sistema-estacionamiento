@@ -25,4 +25,6 @@ public class TicketResponseDTO {
     private LocalDateTime fechaHoraSalida;
 
     private EstadoTicket estadoTicket;
+
+    private String observaciones;
 }

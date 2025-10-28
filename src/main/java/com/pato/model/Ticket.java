@@ -36,4 +36,6 @@ public class Ticket {
 
     @Enumerated(EnumType.STRING)
     private EstadoTicket estadoTicket;
+
+    private String observaciones;
 }

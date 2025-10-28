@@ -81,7 +81,7 @@ public class TicketService implements ITicketService {
     }
 
     @Override
-    public TicketResponseDTO salidaVehiculo(Long idTicket) {
+    public TicketResponseDTO salidaVehiculo(Long idTicket, String observaciones) {
         log.info("Registrando salida para ticket ID: {}", idTicket);
 
         Ticket ticket=getEntityById(idTicket);
@@ -90,6 +90,10 @@ public class TicketService implements ITicketService {
 
         ticket.setFechaHoraSalida(LocalDateTime.now());
         ticket.setEstadoTicket(EstadoTicket.FINALIZADO);
+
+        if(observaciones!=null && !observaciones.isEmpty()){
+            ticket.setObservaciones(observaciones);
+        }
 
         Ticket guardado=ticketRepository.save(ticket);
         log.info("Ticket ID {} finalizado correctamente. Hora de salida: {}",
