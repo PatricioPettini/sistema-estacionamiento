@@ -1,5 +1,6 @@
 package com.pato.controller;
 
+import com.pato.dto.request.ObservacionRequest;
 import com.pato.dto.request.TicketRequestDTO;
 import com.pato.dto.response.TicketResponseDTO;
 import com.pato.service.interfaces.ITicketService;
@@ -38,7 +39,7 @@ public class TicketController {
     }
 
     @PatchMapping("/finalizar/{idTicket}")
-    public ResponseEntity<TicketResponseDTO> finalizarTicket(@PathVariable Long idTicket, @RequestBody String observaciones){
-        return ResponseEntity.ok(ticketService.salidaVehiculo(idTicket, observaciones));
+    public ResponseEntity<TicketResponseDTO> finalizarTicket(@PathVariable Long idTicket, @RequestBody ObservacionRequest observaciones){
+        return ResponseEntity.ok(ticketService.salidaVehiculo(idTicket, observaciones.getObservaciones()));
     }
 }
