@@ -108,6 +108,6 @@ public class TicketService implements ITicketService {
         return ticketRepository.findById(idTicket)
                 .orElseThrow(() -> {
                     log.error("Error al buscar ticket: no existe ticket con ID {}", idTicket);
-                    return new IllegalArgumentException("El ticket con ese id no existe");
+                    return new IllegalArgumentException("No existe ticket con ese id!");
                 });    }
 }
