@@ -70,8 +70,6 @@ public class TicketService implements ITicketService {
 
         Ticket nuevoTicket=ticketFactory.crearTicket(ticketRequestDTO);
 
-        ticketValidator.validarVehiculoEnCurso(nuevoTicket.getVehiculo().getId(), nuevoTicket.getEstadoTicket());
-
         Ticket guardado=ticketRepository.save(nuevoTicket);
         log.info("Ticket creado exitosamente con ID: {} para vehículo: {}",
                 guardado.getId(),
