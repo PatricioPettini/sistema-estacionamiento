@@ -58,5 +58,3 @@ public class DatosConductorValidator implements ConstraintValidator<DatosConduct
                 .addConstraintViolation();
     }
 }
-
-
