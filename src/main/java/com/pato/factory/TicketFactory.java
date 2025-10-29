@@ -9,6 +9,7 @@ import com.pato.model.Conductor;
 import com.pato.model.Ticket;
 import com.pato.model.Vehiculo;
 import com.pato.model.enums.EstadoTicket;
+import com.pato.model.enums.TipoVehiculo;
 import com.pato.service.interfaces.IConductorService;
 import com.pato.service.interfaces.IVehiculoService;
 import com.pato.validation.TicketValidator;
@@ -40,7 +41,9 @@ public class TicketFactory {
         Vehiculo vehiculo= vehiculoService.getEntityByPatente(patente)
                 .orElseGet(()->vehiculoService.crearVehiculo(ticketRequestDTO.getVehiculo()));
 
-        ticketValidator.validarVehiculoEnCurso(vehiculo.getPatente(), EstadoTicket.EN_CURSO);
+        if(!vehiculo.getTipo().equals(TipoVehiculo.BICICLETA)) {
+            ticketValidator.validarVehiculoEnCurso(vehiculo.getPatente(), EstadoTicket.EN_CURSO);
+        }
 
         return Ticket.builder()
                         .conductor(conductor)
