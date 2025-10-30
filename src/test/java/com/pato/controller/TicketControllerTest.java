@@ -15,12 +15,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -37,6 +39,7 @@ class TicketControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("GET /ticket/get/{id} debe retornar un ticket")
     void getTicket_deberiaRetornarTicket() throws Exception {
         TicketResponseDTO response = new TicketResponseDTO();
@@ -50,6 +53,7 @@ class TicketControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("GET /ticket debe retornar lista de tickets")
     void getAllTickets_deberiaRetornarLista() throws Exception {
         TicketResponseDTO t1 = new TicketResponseDTO();
@@ -66,6 +70,7 @@ class TicketControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("POST /ticket/crear debe crear un ticket y retornar DTO")
     void crearTicket_deberiaGuardarYRetornarDTO() throws Exception {
         TicketRequestDTO request = new TicketRequestDTO();
@@ -78,6 +83,7 @@ class TicketControllerTest {
         Mockito.when(ticketService.crearTicket(any(TicketRequestDTO.class))).thenReturn(response);
 
         mockMvc.perform(post("/ticket/crear")
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk())
@@ -85,6 +91,7 @@ class TicketControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("PUT /ticket/editar/{id} debe actualizar un ticket existente")
     void editarTicket_deberiaActualizarYRetornarDTO() throws Exception {
         TicketRequestDTO request = new TicketRequestDTO();
@@ -97,6 +104,7 @@ class TicketControllerTest {
         Mockito.when(ticketService.editarTicket(eq(99L), any(TicketRequestDTO.class))).thenReturn(response);
 
         mockMvc.perform(put("/ticket/editar/{idTicket}", 99L)
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk())
@@ -104,6 +112,7 @@ class TicketControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("PATCH /ticket/finalizar/{id} debe marcar ticket como finalizado")
     void finalizarTicket_deberiaFinalizarYRetornarDTO() throws Exception {
         ObservacionRequest request = new ObservacionRequest();
@@ -112,10 +121,11 @@ class TicketControllerTest {
         TicketResponseDTO response = new TicketResponseDTO();
         response.setId(5L);
 
-        Mockito.when(ticketService.salidaVehiculo(eq(5L), eq("Vehículo retirado correctamente")))
+        Mockito.when(ticketService.salidaVehiculo(5L,"Vehículo retirado correctamente"))
                 .thenReturn(response);
 
         mockMvc.perform(patch("/ticket/finalizar/{idTicket}", 5L)
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk())

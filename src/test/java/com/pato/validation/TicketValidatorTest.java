@@ -24,10 +24,6 @@ class TicketValidatorTest {
         ticketValidator = new TicketValidator(ticketRepository);
     }
 
-    // =====================================================
-    // validarTicketFinalizado
-    // =====================================================
-
     @Test
     @DisplayName("Debe lanzar excepción si el ticket ya está finalizado")
     void validarTicketFinalizado_DeberiaLanzarExcepcionSiYaFinalizado() {
@@ -48,10 +44,6 @@ class TicketValidatorTest {
                 ticketValidator.validarTicketFinalizado(1L, EstadoTicket.EN_CURSO)
         );
     }
-
-    // =====================================================
-    // validarVehiculoEnCurso
-    // =====================================================
 
     @Test
     @DisplayName("Debe lanzar excepción si ya existe ticket en curso para la patente")
@@ -79,10 +71,6 @@ class TicketValidatorTest {
                 ticketValidator.validarVehiculoEnCurso(patente, EstadoTicket.EN_CURSO)
         );
     }
-
-    // =====================================================
-    // validarConductorEnCurso
-    // =====================================================
 
     @Test
     @DisplayName("Debe lanzar excepción si ya existe ticket en curso para el conductor")

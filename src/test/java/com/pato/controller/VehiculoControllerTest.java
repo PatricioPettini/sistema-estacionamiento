@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
@@ -21,6 +22,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.hamcrest.Matchers.*;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -37,6 +39,7 @@ class VehiculoControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     void getAllVehiculos_deberiaRetornarListaDeVehiculos() throws Exception {
         var v1 = new VehiculoResponseDTO(1L, TipoVehiculo.AUTO, "ABC123");
         var v2 = new VehiculoResponseDTO(2L, TipoVehiculo.MOTO, "XYZ789");
@@ -52,6 +55,7 @@ class VehiculoControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     void getVehiculo_porPatente_deberiaRetornarVehiculo() throws Exception {
         var vehiculo = new VehiculoResponseDTO(1L, TipoVehiculo.AUTO, "ABC123");
         Mockito.when(vehiculoService.getVehiculo("ABC123"))
@@ -64,6 +68,7 @@ class VehiculoControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     void editarVehiculo_deberiaActualizarYRetornarVehiculoEditado() throws Exception {
         var request = new VehiculoRequestDTO(TipoVehiculo.AUTO, "ZZZ999");
         var response = new VehiculoResponseDTO(1L, TipoVehiculo.AUTO, "ZZZ999");
@@ -72,6 +77,7 @@ class VehiculoControllerTest {
                 .thenReturn(response);
 
         mockMvc.perform(put("/vehiculo/editar/1")
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk())
@@ -79,7 +85,9 @@ class VehiculoControllerTest {
                 .andExpect(jsonPath("$.tipo", is("AUTO")));
     }
 
+
     @Test
+    @WithMockUser(roles = "ADMIN")
     void getHistorialVehiculo_deberiaRetornarListaDeTickets() throws Exception {
         var vehiculo = new VehiculoResponseDTO(1L, TipoVehiculo.AUTO, "ABC123");
         var conductor = new ConductorResponseDTO(1L, "Juan", "Pérez", "12345678");

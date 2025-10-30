@@ -15,6 +15,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
@@ -42,6 +43,7 @@ class VehiculoControllerIntTest {
     private ObjectMapper objectMapper;
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("Debe devolver todos los vehículos")
     void getAllVehiculos_DeberiaRetornarLista() throws Exception {
         List<VehiculoResponseDTO> lista = List.of(
@@ -59,6 +61,7 @@ class VehiculoControllerIntTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("Debe devolver un vehículo por patente")
     void getVehiculo_DeberiaRetornarVehiculo() throws Exception {
         VehiculoResponseDTO vehiculo = new VehiculoResponseDTO(1L, TipoVehiculo.AUTO, "AAA111");
@@ -74,6 +77,7 @@ class VehiculoControllerIntTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("Debe editar un vehículo correctamente")
     void editarVehiculo_DeberiaActualizarVehiculo() throws Exception {
         VehiculoRequestDTO request = new VehiculoRequestDTO(TipoVehiculo.AUTO, "CCC333");
@@ -91,6 +95,7 @@ class VehiculoControllerIntTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     @DisplayName("Debe devolver el historial de tickets del vehículo")
     void getHistorialVehiculo_DeberiaRetornarListaDeTickets() throws Exception {
         VehiculoResponseDTO vehiculo = new VehiculoResponseDTO(1L, TipoVehiculo.AUTO, "AAA111");
