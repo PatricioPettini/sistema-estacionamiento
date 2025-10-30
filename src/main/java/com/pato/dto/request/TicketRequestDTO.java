@@ -1,10 +1,6 @@
 package com.pato.dto.request;
 
-import com.pato.model.Conductor;
-import com.pato.model.Vehiculo;
-import com.pato.validation.HorarioValido;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,255 +1,106 @@
-2025-10-28T00:52:25.239-03:00  INFO 19600 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 19600 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T00:52:25.252-03:00  INFO 19600 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T00:52:26.829-03:00  INFO 19600 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T00:52:26.951-03:00  INFO 19600 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 3 JPA repository interfaces.
-2025-10-28T00:52:28.716-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T00:52:28.737-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T00:52:28.737-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T00:52:28.881-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T00:52:28.881-03:00  INFO 19600 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3550 ms
-2025-10-28T00:52:29.165-03:00  INFO 19600 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T00:52:31.182-03:00  INFO 19600 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c538eb2
-2025-10-28T00:52:31.185-03:00  INFO 19600 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T00:52:31.246-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T00:52:31.398-03:00  INFO 19600 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T00:52:31.489-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T00:52:32.135-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T00:52:34.162-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T00:52:34.166-03:00  INFO 19600 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T00:52:35.069-03:00  WARN 19600 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T00:52:35.801-03:00  INFO 19600 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T00:52:35.822-03:00  INFO 19600 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 11.391 seconds (process running for 12.056)
-2025-10-28T00:52:38.692-03:00  INFO 19600 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T00:52:38.695-03:00  INFO 19600 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-28T00:52:39.439-03:00  INFO 19600 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-28T00:58:11.738-03:00  INFO 19448 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 19448 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T00:58:11.741-03:00  INFO 19448 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T00:58:13.049-03:00  INFO 19448 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T00:58:13.139-03:00  INFO 19448 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
-2025-10-28T00:58:14.017-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T00:58:14.037-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T00:58:14.038-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T00:58:14.144-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T00:58:14.144-03:00  INFO 19448 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2346 ms
-2025-10-28T00:58:14.337-03:00  INFO 19448 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T00:58:16.242-03:00  INFO 19448 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70997a94
-2025-10-28T00:58:16.244-03:00  INFO 19448 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T00:58:16.301-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T00:58:16.377-03:00  INFO 19448 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T00:58:16.432-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T00:58:16.833-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T00:58:18.492-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T00:58:18.498-03:00  INFO 19448 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T00:58:19.306-03:00  WARN 19448 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T00:58:20.016-03:00  INFO 19448 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T00:58:20.037-03:00  INFO 19448 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 8.96 seconds (process running for 9.644)
-2025-10-28T00:58:24.457-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-28T00:58:24.457-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-28T00:58:24.459-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-10-28T00:58:24.714-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.TicketService      : Creando nuevo ticket para vehículo con patente: GAA323
-2025-10-28T00:58:25.311-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.ConductorService   : Creando nuevo conductor con DNI: 44998329
-2025-10-28T00:58:26.156-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.ConductorService   : Conductor creado exitosamente con ID: 1
-2025-10-28T00:58:26.540-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.VehiculoService    : Creando nuevo vehiculo con patente: GAA323
-2025-10-28T00:58:27.275-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.VehiculoService    : Vehiculo creado exitosamente con ID: 1
-2025-10-28T00:58:28.404-03:00  INFO 19448 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.TicketService      : Ticket creado exitosamente con ID: 1 para vehículo: GAA323
-2025-10-28T01:01:18.998-03:00  INFO 19448 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T01:01:19.001-03:00  INFO 19448 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-28T01:01:19.010-03:00  INFO 19448 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-28T01:05:58.456-03:00  INFO 21936 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 21936 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T01:05:58.465-03:00  INFO 21936 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T01:05:59.250-03:00  INFO 21936 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T01:05:59.315-03:00  INFO 21936 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
-2025-10-28T01:05:59.857-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T01:05:59.870-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T01:05:59.871-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T01:05:59.950-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T01:05:59.950-03:00  INFO 21936 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1441 ms
-2025-10-28T01:06:00.067-03:00  INFO 21936 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T01:06:02.384-03:00  INFO 21936 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42c12b3e
-2025-10-28T01:06:02.386-03:00  INFO 21936 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T01:06:02.428-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T01:06:02.476-03:00  INFO 21936 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T01:06:02.511-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T01:06:02.848-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T01:06:04.235-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T01:06:04.238-03:00  INFO 21936 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T01:06:04.723-03:00  WARN 21936 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T01:06:05.162-03:00  INFO 21936 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T01:06:05.178-03:00  INFO 21936 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 7.123 seconds (process running for 7.472)
-2025-10-28T01:06:41.360-03:00  INFO 27480 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 27480 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T01:06:41.363-03:00  INFO 27480 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T01:06:42.523-03:00  INFO 27480 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T01:06:42.634-03:00  INFO 27480 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
-2025-10-28T01:06:43.553-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T01:06:43.577-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T01:06:43.577-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T01:06:43.718-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T01:06:43.719-03:00  INFO 27480 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2285 ms
-2025-10-28T01:06:43.998-03:00  INFO 27480 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T01:06:46.150-03:00  INFO 27480 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12abcd1e
-2025-10-28T01:06:46.152-03:00  INFO 27480 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T01:06:46.198-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T01:06:46.263-03:00  INFO 27480 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T01:06:46.318-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T01:06:46.784-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T01:06:48.353-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T01:06:48.357-03:00  INFO 27480 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T01:06:49.023-03:00  WARN 27480 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T01:06:49.673-03:00  INFO 27480 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T01:06:49.689-03:00  INFO 27480 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 8.828 seconds (process running for 9.229)
-2025-10-28T01:06:52.392-03:00  INFO 27480 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T01:06:52.394-03:00  INFO 27480 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-28T01:06:54.017-03:00  INFO 27480 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-28T01:09:00.745-03:00  INFO 23012 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 23012 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T01:09:00.745-03:00  INFO 23012 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T01:09:02.054-03:00  INFO 23012 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T01:09:02.165-03:00  INFO 23012 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
-2025-10-28T01:09:03.017-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T01:09:03.035-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T01:09:03.036-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T01:09:03.127-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T01:09:03.128-03:00  INFO 23012 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2310 ms
-2025-10-28T01:09:03.299-03:00  INFO 23012 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T01:09:05.412-03:00  INFO 23012 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14b4340c
-2025-10-28T01:09:05.412-03:00  INFO 23012 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T01:09:05.467-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T01:09:05.530-03:00  INFO 23012 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T01:09:05.580-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T01:09:05.990-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T01:09:07.472-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T01:09:07.475-03:00  INFO 23012 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T01:09:08.100-03:00  WARN 23012 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T01:09:08.693-03:00  INFO 23012 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T01:09:08.709-03:00  INFO 23012 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 8.522 seconds (process running for 8.982)
-2025-10-28T01:09:17.526-03:00  INFO 23012 --- [sistema-estacionamiento] [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-28T01:09:17.526-03:00  INFO 23012 --- [sistema-estacionamiento] [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-28T01:09:17.528-03:00  INFO 23012 --- [sistema-estacionamiento] [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-10-28T01:09:17.716-03:00  INFO 23012 --- [sistema-estacionamiento] [http-nio-8082-exec-3] c.p.s.implementations.TicketService      : Creando nuevo ticket para vehículo con patente: GAA323
-2025-10-28T01:09:24.668-03:00  INFO 23012 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.TicketService      : Creando nuevo ticket para vehículo con patente: GAA323
-2025-10-28T01:09:25.036-03:00  INFO 23012 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.ConductorService   : Creando nuevo conductor con DNI: 4234234
-2025-10-28T01:09:25.850-03:00  INFO 23012 --- [sistema-estacionamiento] [http-nio-8082-exec-2] c.p.s.implementations.ConductorService   : Conductor creado exitosamente con ID: 2
-2025-10-28T18:49:50.070-03:00  INFO 12676 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 12676 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T18:49:50.074-03:00  INFO 12676 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T18:49:51.895-03:00  INFO 12676 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T18:49:52.008-03:00  INFO 12676 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 3 JPA repository interfaces.
-2025-10-28T18:49:53.146-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T18:49:53.169-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T18:49:53.169-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T18:49:53.279-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T18:49:53.280-03:00  INFO 12676 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3101 ms
-2025-10-28T18:49:53.549-03:00  INFO 12676 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T18:49:56.066-03:00  INFO 12676 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20349058
-2025-10-28T18:49:56.069-03:00  INFO 12676 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T18:49:56.143-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T18:49:56.433-03:00  INFO 12676 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T18:49:56.512-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T18:49:57.050-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T18:49:59.138-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T18:49:59.141-03:00  INFO 12676 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T18:50:00.049-03:00  WARN 12676 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T18:50:00.816-03:00  INFO 12676 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T18:50:00.836-03:00  INFO 12676 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 11.671 seconds (process running for 12.691)
-2025-10-28T18:51:10.030-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-28T18:51:10.032-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-28T18:51:10.034-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-10-28T18:51:16.473-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-3] c.p.s.implementations.TicketService      : Registrando salida para ticket ID: 1
-2025-10-28T18:51:18.311-03:00  WARN 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1406, SQLState: 22001
-2025-10-28T18:51:18.312-03:00 ERROR 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : Data truncation: Data too long for column 'observaciones' at row 1
-2025-10-28T18:52:22.881-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-10] c.p.s.implementations.TicketService      : Registrando salida para ticket ID: 1
-2025-10-28T18:52:24.914-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-10] c.p.s.implementations.TicketService      : Ticket ID 1 finalizado correctamente. Hora de salida: 2025-10-28T18:52:24.167664600
-2025-10-28T18:55:25.801-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-7] c.p.s.implementations.TicketService      : Registrando salida para ticket ID: 1
-2025-10-28T18:55:27.091-03:00  WARN 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-7] com.pato.validation.TicketValidator      : El ticket ya se encuentra finalizado. ID: 1
-2025-10-28T18:57:52.739-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-6] c.p.s.implementations.TicketService      : Registrando salida para ticket ID: 1
-2025-10-28T18:57:54.047-03:00  WARN 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-6] com.pato.validation.TicketValidator      : El ticket ya se encuentra finalizado. ID: 1
-2025-10-28T18:57:58.111-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-3] c.p.s.implementations.TicketService      : Registrando salida para ticket ID: 1
-2025-10-28T18:57:59.402-03:00  WARN 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-3] com.pato.validation.TicketValidator      : El ticket ya se encuentra finalizado. ID: 1
-2025-10-28T18:58:29.966-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-5] c.p.s.implementations.TicketService      : Creando nuevo ticket para vehículo con patente: GAA323
-2025-10-28T18:58:31.665-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-5] c.p.s.implementations.TicketService      : Ticket creado exitosamente con ID: 4 para vehículo: GAA323
-2025-10-28T18:58:40.985-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-4] c.p.s.implementations.TicketService      : Registrando salida para ticket ID: 4
-2025-10-28T18:58:43.033-03:00  INFO 12676 --- [sistema-estacionamiento] [http-nio-8082-exec-4] c.p.s.implementations.TicketService      : Ticket ID 4 finalizado correctamente. Hora de salida: 2025-10-28T18:58:42.297252600
-2025-10-28T18:59:53.271-03:00  INFO 12676 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T18:59:53.275-03:00  INFO 12676 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-28T18:59:55.117-03:00  INFO 12676 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-28T19:00:02.974-03:00  INFO 22100 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 22100 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T19:00:02.977-03:00  INFO 22100 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T19:00:04.109-03:00  INFO 22100 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T19:00:04.352-03:00  INFO 22100 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 220 ms. Found 3 JPA repository interfaces.
-2025-10-28T19:00:05.280-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T19:00:05.294-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T19:00:05.294-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T19:00:05.379-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T19:00:05.379-03:00  INFO 22100 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2350 ms
-2025-10-28T19:00:05.555-03:00  INFO 22100 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T19:00:07.799-03:00  INFO 22100 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33d28f0a
-2025-10-28T19:00:07.802-03:00  INFO 22100 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T19:00:07.850-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T19:00:07.936-03:00  INFO 22100 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T19:00:07.984-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T19:00:08.375-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T19:00:09.949-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T19:00:09.952-03:00  INFO 22100 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T19:00:10.797-03:00  WARN 22100 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T19:00:11.518-03:00  INFO 22100 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T19:00:11.542-03:00  INFO 22100 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 9.042 seconds (process running for 9.419)
-2025-10-28T19:00:23.407-03:00  INFO 22100 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-28T19:00:23.408-03:00  INFO 22100 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-28T19:00:23.410-03:00  INFO 22100 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-10-28T19:00:27.073-03:00  INFO 22100 --- [sistema-estacionamiento] [http-nio-8082-exec-5] c.p.s.implementations.TicketService      : Obteniendo listado completo de tickets...
-2025-10-28T19:00:43.382-03:00  INFO 22100 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T19:00:43.385-03:00  INFO 22100 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-28T19:00:45.246-03:00  INFO 22100 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-28T19:03:08.218-03:00  INFO 25060 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 25060 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T19:03:08.221-03:00  INFO 25060 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T19:03:09.497-03:00  INFO 25060 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T19:03:09.602-03:00  INFO 25060 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
-2025-10-28T19:03:10.594-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T19:03:10.614-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T19:03:10.614-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T19:03:10.760-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T19:03:10.761-03:00  INFO 25060 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2476 ms
-2025-10-28T19:03:11.237-03:00  INFO 25060 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T19:03:13.556-03:00  INFO 25060 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2313db84
-2025-10-28T19:03:13.560-03:00  INFO 25060 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T19:03:13.607-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T19:03:13.673-03:00  INFO 25060 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T19:03:13.730-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T19:03:14.127-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T19:03:15.861-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T19:03:15.865-03:00  INFO 25060 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T19:03:16.838-03:00  WARN 25060 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T19:03:17.687-03:00  INFO 25060 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T19:03:17.710-03:00  INFO 25060 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 10.014 seconds (process running for 10.477)
-2025-10-28T19:04:46.351-03:00  INFO 25060 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-28T19:04:46.353-03:00  INFO 25060 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-28T19:04:46.354-03:00  INFO 25060 --- [sistema-estacionamiento] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-10-28T19:04:53.993-03:00  INFO 25060 --- [sistema-estacionamiento] [http-nio-8082-exec-8] c.p.s.implementations.TicketService      : Creando nuevo ticket para vehículo con patente: ASDAS32
-2025-10-28T19:04:54.553-03:00  INFO 25060 --- [sistema-estacionamiento] [http-nio-8082-exec-8] c.p.s.implementations.VehiculoService    : Creando nuevo vehiculo con patente: ASDAS32
-2025-10-28T19:04:55.374-03:00  INFO 25060 --- [sistema-estacionamiento] [http-nio-8082-exec-8] c.p.s.implementations.VehiculoService    : Vehiculo creado exitosamente con ID: 4
-2025-10-28T19:04:56.525-03:00  INFO 25060 --- [sistema-estacionamiento] [http-nio-8082-exec-8] c.p.s.implementations.TicketService      : Ticket creado exitosamente con ID: 5 para vehículo: ASDAS32
-2025-10-28T19:05:02.114-03:00  INFO 25060 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T19:05:02.117-03:00  INFO 25060 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-28T19:05:03.950-03:00  INFO 25060 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-28T22:51:47.107-03:00  INFO 1576 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 1576 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento)
-2025-10-28T22:51:47.110-03:00  INFO 1576 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
-2025-10-28T22:51:48.652-03:00  INFO 1576 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-28T22:51:48.768-03:00  INFO 1576 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 3 JPA repository interfaces.
-2025-10-28T22:51:49.737-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-10-28T22:51:49.744-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-28T22:51:49.744-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2025-10-28T22:51:49.921-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-28T22:51:49.922-03:00  INFO 1576 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2747 ms
-2025-10-28T22:51:50.211-03:00  INFO 1576 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-28T22:51:52.746-03:00  INFO 1576 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2dc39b53
-2025-10-28T22:51:52.746-03:00  INFO 1576 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-28T22:51:52.809-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-28T22:51:52.972-03:00  INFO 1576 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-10-28T22:51:53.039-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-28T22:51:53.619-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-28T22:51:55.728-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-28T22:51:55.731-03:00  INFO 1576 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T22:51:56.614-03:00  WARN 1576 --- [sistema-estacionamiento] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-28T22:51:57.437-03:00  INFO 1576 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-10-28T22:51:57.466-03:00  INFO 1576 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 11.079 seconds (process running for 11.75)
-2025-10-28T22:52:08.605-03:00  INFO 1576 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-28T22:52:08.610-03:00  INFO 1576 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-28T22:52:10.665-03:00  INFO 1576 --- [sistema-estacionamiento] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-30T00:30:01.702-03:00  INFO 25560 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 25560 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento - copia\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento - copia)
+2025-10-30T00:30:01.719-03:00  INFO 25560 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
+2025-10-30T00:30:04.305-03:00  INFO 25560 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T00:30:04.440-03:00  INFO 25560 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 5 JPA repository interfaces.
+2025-10-30T00:30:05.714-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-30T00:30:05.732-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T00:30:05.732-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2025-10-30T00:30:05.854-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-30T00:30:05.855-03:00  INFO 25560 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4026 ms
+2025-10-30T00:30:06.104-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-30T00:30:06.239-03:00  INFO 25560 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-10-30T00:30:06.338-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-30T00:30:06.865-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-30T00:30:06.928-03:00  INFO 25560 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-30T00:30:07.219-03:00  INFO 25560 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-10-30T00:30:07.221-03:00  INFO 25560 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-30T00:30:07.261-03:00  WARN 25560 --- [sistema-estacionamiento] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-30T00:30:08.714-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-30T00:30:08.832-03:00  INFO 25560 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T00:30:08.861-03:00  WARN 25560 --- [sistema-estacionamiento] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento - copia\target\classes\com\pato\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtils': Injection of autowired dependencies failed
+2025-10-30T00:30:08.862-03:00  INFO 25560 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T00:30:08.882-03:00  INFO 25560 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-30T00:30:08.886-03:00  INFO 25560 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-30T00:30:08.889-03:00  INFO 25560 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-30T00:30:08.909-03:00  INFO 25560 --- [sistema-estacionamiento] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-30T00:30:08.952-03:00 ERROR 25560 --- [sistema-estacionamiento] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento - copia\target\classes\com\pato\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtils': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.pato.SistemaEstacionamientoApplication.main(SistemaEstacionamientoApplication.java:13) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'security.jwt.private.key' in value "${security.jwt.private.key}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 31 common frames omitted
+
+2025-10-30T00:32:12.533-03:00  INFO 26188 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Starting SistemaEstacionamientoApplication using Java 17.0.12 with PID 26188 (C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento - copia\target\classes started by Patricio in C:\Users\Patricio\OneDrive\Escritorio\PatoProyectos\sistema-estacionamiento - copia)
+2025-10-30T00:32:12.537-03:00  INFO 26188 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : No active profile set, falling back to 1 default profile: "prod"
+2025-10-30T00:32:14.026-03:00  INFO 26188 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T00:32:14.152-03:00  INFO 26188 --- [sistema-estacionamiento] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 5 JPA repository interfaces.
+2025-10-30T00:32:15.308-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-30T00:32:15.327-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T00:32:15.328-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2025-10-30T00:32:15.478-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-30T00:32:15.478-03:00  INFO 26188 --- [sistema-estacionamiento] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2868 ms
+2025-10-30T00:32:15.782-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-30T00:32:15.896-03:00  INFO 26188 --- [sistema-estacionamiento] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-10-30T00:32:15.969-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-30T00:32:16.403-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-30T00:32:16.445-03:00  INFO 26188 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-30T00:32:16.658-03:00  INFO 26188 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-10-30T00:32:16.659-03:00  INFO 26188 --- [sistema-estacionamiento] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-30T00:32:16.685-03:00  WARN 26188 --- [sistema-estacionamiento] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-30T00:32:17.940-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-30T00:32:18.014-03:00  INFO 26188 --- [sistema-estacionamiento] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T00:32:19.356-03:00  INFO 26188 --- [sistema-estacionamiento] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-30T00:32:19.357-03:00  WARN 26188 --- [sistema-estacionamiento] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-10-30T00:32:20.451-03:00  INFO 26188 --- [sistema-estacionamiento] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-30T00:32:20.470-03:00  INFO 26188 --- [sistema-estacionamiento] [main] c.p.SistemaEstacionamientoApplication    : Started SistemaEstacionamientoApplication in 8.493 seconds (process running for 9.032)
+2025-10-30T00:33:15.291-03:00  INFO 26188 --- [sistema-estacionamiento] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-30T00:33:15.293-03:00  INFO 26188 --- [sistema-estacionamiento] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-30T00:33:15.295-03:00  INFO 26188 --- [sistema-estacionamiento] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

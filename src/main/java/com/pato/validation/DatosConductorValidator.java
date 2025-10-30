@@ -1,31 +1,36 @@
 package com.pato.validation;
 
 import com.pato.dto.request.ConductorRequestDTO;
-import com.pato.dto.request.VehiculoRequestDTO;
-import com.pato.model.Conductor;
 import com.pato.service.interfaces.IConductorService;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-@RequiredArgsConstructor
+@Component
 public class DatosConductorValidator implements ConstraintValidator<DatosConductor, ConductorRequestDTO> {
 
-    private final IConductorService conductorService;
+    @Autowired(required = false)
+    private IConductorService conductorService;
+
+    public DatosConductorValidator() {
+    }
 
     @Override
     public boolean isValid(ConductorRequestDTO dto, ConstraintValidatorContext context) {
-        String dni = dto.getDni();
+        if (dto == null) return false;
 
+        String dni = dto.getDni();
         if (dni == null || dni.isBlank()) {
             agregarMensaje(context, "El DNI es obligatorio");
             return false;
         }
 
-        // Verifico si el conductor ya existe
-        boolean existe = conductorService.getEntityByDni(dni).isPresent();
+        boolean existe = false;
+        if (conductorService != null) {
+            existe = conductorService.getEntityByDni(dni).isPresent();
+        }
 
-        // Si no existe, debe ingresar nombre y apellido válidos
         if (!existe) {
             if (dto.getNombre() == null || dto.getNombre().isBlank()) {
                 agregarMensaje(context, "Debe ingresar el nombre del conductor");

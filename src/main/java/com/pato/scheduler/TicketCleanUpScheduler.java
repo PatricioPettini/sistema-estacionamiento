@@ -17,11 +17,9 @@ public class TicketCleanUpScheduler {
         this.ticketRepository = ticketRepository;
     }
 
-    // Corre una vez al día a las 3 AM
     @Scheduled(cron = "0 0 3 * * ?")
     public void eliminarTicketsViejos() {
-        LocalDateTime limite = LocalDateTime.now().minusDays(7);
+        LocalDateTime limite = LocalDateTime.now().minusDays(15);
         ticketRepository.deleteByFechaHoraEntradaBefore(limite);
-        System.out.println("🗑️ Tickets anteriores a " + limite + " eliminados");
     }
 }
